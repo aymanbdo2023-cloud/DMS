@@ -44,8 +44,13 @@ export const downloadDocument = async (docId: number, fileName: string) => {
   const res = await fetch(`http://localhost:3000/download/${docId}`, {
     headers: { "api-key": import.meta.env.API_KEY },
   });
-  if (!res.ok) throw new Error("Download failed");
-  const blob = await res.blob();
+  
+  if (!res.ok) { 
+    throw new Error("Download failed");
+  }
+
+  // Handles the download of the file from a webbrowser perspective
+  const blob = await res.blob(); // Converts the results from binary into Blob object
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;

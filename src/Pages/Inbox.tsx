@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
-import { getInbox, downloadDocument, type SharedDocument } from "../api/documents";
+import {
+  getInbox,
+  downloadDocument,
+  type SharedDocument,
+} from "../api/documents";
+import { useNotifications } from "../context/NotificationContext";
 import Navbar from "./Navbar";
 import "./styles/Inbox.css";
 
 function InboxPage() {
   const [documents, setDocuments] = useState<SharedDocument[]>([]);
   const [loading, setLoading] = useState(true);
+  const { markAllRead } = useNotifications();
 
   const userRaw = localStorage.getItem("user");
   const user = userRaw ? JSON.parse(userRaw) : null;
 
   useEffect(() => {
+    markAllRead();
     const fetchInbox = async () => {
       try {
         const data = await getInbox(user?.id ?? 0);
@@ -24,6 +31,7 @@ function InboxPage() {
     fetchInbox();
   }, []);
 
+  // Making the file size display be more user-friendly, (using MB / KB) instead of just B
   const formatSize = (bytes: number) => {
     if (bytes >= 1048576) return (bytes / 1048576).toFixed(1) + " MB";
     if (bytes >= 1024) return (bytes / 1024).toFixed(0) + " KB";
@@ -42,7 +50,7 @@ function InboxPage() {
     try {
       await downloadDocument(doc.id, doc.title);
     } catch {
-      alert("Backend not connected yet");
+      alert("A problem occured when trying to download the document!");
     }
   };
 

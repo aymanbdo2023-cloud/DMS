@@ -1,0 +1,69 @@
+.notif-toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 380px;
+  padding: 14px 16px;
+  background-color: #1f2937;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 9999;
+  animation: slideInRight 0.35s ease-out;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.notif-toast:hover {
+  background-color: #374151;
+}
+
+.notif-toast-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.notif-toast-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notif-toast-close {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.notif-toast-close:hover {
+  color: white;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
