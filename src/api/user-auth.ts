@@ -9,8 +9,13 @@ export interface UserSessionCred {
 
 const baseUrl = "http://localhost:3000/auth";
 
-export const authUser = async (username: string, password: string) => {
+export const authUser = async (
+  username: string,
+  password: string,
+  id?: string,
+) => {
   const url = new URL(baseUrl);
+  if (id) url.searchParams.set("id", id);
   url.searchParams.set("username", username);
   url.searchParams.set("passw", password);
 

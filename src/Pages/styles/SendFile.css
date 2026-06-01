@@ -1,0 +1,128 @@
+.send-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  min-height: calc(100vh - 56px);
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.send-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.send-title {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.send-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.send-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.send-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.send-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.drop-zone:hover {
+  border-color: #2563eb;
+  background-color: #f0f5ff;
+}
+
+.drop-zone-active {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.drop-placeholder {
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px;
+}
+
+.drop-file-name {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.send-error {
+  color: #ef4444;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.send-success {
+  color: #16a34a;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 10px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s;
+}
+
+.send-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.send-btn:active:not(:disabled) {
+  background-color: #1e40af;
+}
+
+.send-btn:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}

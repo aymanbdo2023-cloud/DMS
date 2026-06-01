@@ -11,7 +11,11 @@ function LoginPage() {
   const handleLogin = async () => {
     try {
       const response = await authUser(username, password);
-      console.log("User id logged in: ", response.id);
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ id: response.id, username: response.username })
+      );
+      navigate("/inbox");
     } catch (err) {
       alert("Login Failed");
     }

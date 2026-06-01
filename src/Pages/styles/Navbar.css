@@ -1,0 +1,73 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 56px;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.nav-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+  cursor: pointer;
+  margin-right: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.nav-link-active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-username {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.nav-logout {
+  padding: 6px 16px;
+  background-color: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.nav-logout:hover {
+  background-color: #ef4444;
+  color: white;
+}

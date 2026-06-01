@@ -1,0 +1,109 @@
+.inbox-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  min-height: calc(100vh - 56px);
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.inbox-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 32px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.inbox-title {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.inbox-empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 15px;
+  padding: 48px 0;
+}
+
+.inbox-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  padding: 48px 0;
+}
+
+.inbox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inbox-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.inbox-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.inbox-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.cell-title {
+  font-weight: 500;
+}
+
+.cell-sender {
+  color: #6b7280;
+}
+
+.cell-date {
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.cell-size {
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.cell-action {
+  text-align: right;
+}
+
+.btn-download {
+  padding: 6px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s;
+}
+
+.btn-download:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-download:active {
+  background-color: #1e40af;
+}
